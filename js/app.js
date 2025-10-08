@@ -658,6 +658,12 @@ async function search() {
 
         // 对搜索结果进行排序：按名称优先，名称相同时按接口源排序
         allResults.sort((a, b) => {
+            const aIsMatch = (a.vod_name || '') === query;
+            const bIsMatch = (b.vod_name || '') === query;
+
+            // 首先将名称匹配的排在前面
+            if (aIsMatch && !bIsMatch) return -1; // a 在前
+            if (!aIsMatch && bIsMatch) return 1;  // b 在前
             // 首先按照视频名称排序
             const nameCompare = (a.vod_name || '').localeCompare(b.vod_name || '');
             if (nameCompare !== 0) return nameCompare;
