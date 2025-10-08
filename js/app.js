@@ -658,16 +658,19 @@ async function search() {
 
         // 对搜索结果进行排序：按名称优先，名称相同时按接口源排序
         allResults.sort((a, b) => {
+            // 首先将名称完全匹配的排在最前面
             const aIsMatch = (a.vod_name || '') === query;
             const bIsMatch = (b.vod_name || '') === query;
-
-            // 首先将名称匹配的排在前面
             if (aIsMatch && !bIsMatch) return -1; // a 在前
             if (!aIsMatch && bIsMatch) return 1;  // b 在前
-            // 首先按照视频名称排序
+            // 其次排以输入开头的情况
+            const aStartsWithQuery = (a.vod_name || '').startsWith(query);
+            const bStartsWithQuery = (b.vod_name || '').startsWith(query);
+            if (aStartsWithQuery && !bStartsWithQuery) return -1; // a 在前
+            if (!aStartsWithQuery && bStartsWithQuery) return 1;  // b 在前
+            // 最后是其他的
             const nameCompare = (a.vod_name || '').localeCompare(b.vod_name || '');
             if (nameCompare !== 0) return nameCompare;
-            
             // 如果名称相同，则按照来源排序
             return (a.source_name || '').localeCompare(b.source_name || '');
         });
