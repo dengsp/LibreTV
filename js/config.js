@@ -25,7 +25,7 @@ const API_SITES = {
     mtzy: {
         api: 'https://caiji.maotaizy.cc/api.php/provide/vod',
         name: '茅台资源',
-        detail: '茅台资源站 ：mtzy.me   备用网址 ：mtzy0.com(0-7)均可使用'
+        detail: '茅台资源站: mtzy.me   备用网址: mtzy0.com(0-7)均可使用'
     },
     snzy: {
         api: 'https://suoniapi.com/api.php/provide/vod',
@@ -69,7 +69,7 @@ const API_SITES = {
     },
     bfzy: {
 //        api: 'https://bfzyapi.com/api.php/provide/vod',
-        api: 'http://by.bfzyapi.com/api.php/provide/vod' //备用
+        api: 'http://by.bfzyapi.com/api.php/provide/vod', //备用
         name: '暴风资源',
         detail: '暴风资源bfzy.tv 备用网址:bfzy1.tv (1-10)均可使用'
     },
@@ -87,7 +87,7 @@ const API_SITES = {
         api: 'http://ffzy5.tv/api.php/provide/vod',
 //        api: 'http://api.ffzyapi.com/api.php/provide/vod', //备用
         name: '非凡影视',
-        detail: '非凡资源备用网址:ffzy1.tv ffzy2.tv ffzy3.tv ffzy4.tv ffzy5.tv',
+        detail: '非凡资源备用网址:ffzy1.tv ffzy2.tv ffzy3.tv ffzy4.tv ffzy5.tv'
     },
     zy360: {
         api: 'https://360zy.com/api.php/provide/vod',
@@ -104,7 +104,7 @@ const API_SITES = {
     jisu: {
         api: 'https://jszyapi.com/api.php/provide/vod',
         name: '极速资源',
-        detail: '永久官网: www.jisuzy.com    www.jisuzy.tv   www.jisuziyuan.com   www.jszy666.com   www.jszy333.com',
+        detail: '永久官网: www.jisuzy.com    www.jisuzy.tv   www.jisuziyuan.com   www.jszy666.com   www.jszy333.com'
     },
     dbzy: {
         api: 'https://dbzy.tv/api.php/provide/vod',
